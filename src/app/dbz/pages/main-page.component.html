@@ -1,0 +1,22 @@
+<div>
+  <div class="bg-primary bg-gradient p-2 mb-2">
+    <h1 class="text-center text-white">Learning Angular!</h1>
+
+  </div>
+
+  <div class="row">
+    <div class="col  p-4">
+      <dbz-character-list
+      [characterList]="characters"
+      (onDelete)="onDeleteCharacter($event)"
+
+      ></dbz-character-list>
+    </div>
+
+    <!-- recibir en el componente padre -->
+    <div class="col  ms-2 p-4">
+      <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
+    </div>
+
+  </div>
+</div>
